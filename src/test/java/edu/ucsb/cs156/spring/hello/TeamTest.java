@@ -34,12 +34,12 @@ public class TeamTest {
     @Test
     public void equals_sameObject() {
         Team team = new Team();
-        team.addMember("Guntash Singh");
-        team.addMember("Andrew X.");
-        team.addMember("Jayden L.");
-        team.addMember("Kelvin Apollo");
-        team.addMember("Tim Van");
-        team.addMember("Akul S.");
+        team.addMember("GUNTASH SINGH");
+        team.addMember("ANDREW");
+        team.addMember("JAYDEN");
+        team.addMember("KELVIN APOLLO");
+        team.addMember("TIM VAN");
+        team.addMember("AKUL");
         assert(team.equals(team));
     }
 
@@ -47,13 +47,13 @@ public class TeamTest {
     @Test
     public void equals_diffInstance() {
         Team team = new Team();
-        team.addMember("Guntash Singh");
-        team.addMember("Andrew X.");
-        team.addMember("Jayden L.");
-        team.addMember("Kelvin Apollo");
-        team.addMember("Tim Van");
-        team.addMember("Akul S.");
-        String notTeam = "Team(name=f25-15, members=[Guntash Singh, Andrew X., Jayden L., Kelvin Apollo, Tim Van, Akul S.])";
+        team.addMember("GUNTASH SINGH");
+        team.addMember("ANDREW");
+        team.addMember("JAYDEN");
+        team.addMember("KELVIN APOLLO");
+        team.addMember("TIM VAN");
+        team.addMember("AKUL");
+        String notTeam = "Team(name=f25-15, members=[GUNTASH SINGH, ANDREW, JAYDEN, KELVIN APOLLO, TIM VAN, AKUL])";
         assertFalse(team.equals(notTeam));
         assertFalse(team.equals(null));
     }
@@ -63,13 +63,13 @@ public class TeamTest {
     @Test
     public void equals_SameCast() {
         Team team = new Team("f25-15");
-        team.addMember("Guntash Singh");
-        team.addMember("Andrew X.");
-        team.addMember("Jayden L.");
+        team.addMember("GUNTASH SINGH");
+        team.addMember("ANDREW");
+        team.addMember("JAYDEN");
         Team team2 = new Team("f25-15");
-        team2.addMember("Guntash Singh");
-        team2.addMember("Andrew X.");
-        team2.addMember("Jayden L.");
+        team2.addMember("GUNTASH SINGH");
+        team2.addMember("ANDREW");
+        team2.addMember("JAYDEN");
         assertTrue(team.equals(team2));
     }
 
@@ -77,13 +77,13 @@ public class TeamTest {
     @Test
     public void equals_diffMembers() {
         Team team = new Team("f25-15");
-        team.addMember("Guntash Singh");
-        team.addMember("Andrew X.");
-        team.addMember("Jayden L.");
+        team.addMember("GUNTASH SINGH");
+        team.addMember("ANDREW");
+        team.addMember("JAYDEN");
         Team team2 = new Team("f25-15");
-        team2.addMember("Tim Van");
-        team2.addMember("Andrew X.");
-        team2.addMember("Jayden L.");
+        team2.addMember("TIM VAN");
+        team2.addMember("ANDREW");
+        team2.addMember("JAYDEN");
         assertFalse(team.equals(team2));
     }
 
@@ -91,13 +91,13 @@ public class TeamTest {
     @Test
     public void equals_diffName() {
         Team team = new Team("f25-xx");
-        team.addMember("Guntash Singh");
-        team.addMember("Andrew X.");
-        team.addMember("Jayden L.");
+        team.addMember("GUNTASH SINGH");
+        team.addMember("ANDREW");
+        team.addMember("JAYDEN");
         Team team2 = new Team("f25-15");
-        team2.addMember("Guntash Singh");
-        team2.addMember("Andrew X.");
-        team2.addMember("Jayden L.");
+        team2.addMember("GUNTASH SINGH");
+        team2.addMember("ANDREW");
+        team2.addMember("JAYDEN");
         assertFalse(team.equals(team2));
     }
 
@@ -105,13 +105,13 @@ public class TeamTest {
     @Test
     public void equals_diffNameAndMembers() {
         Team team = new Team("f25-xx");
-        team.addMember("Guntash Singh");
-        team.addMember("Andrew X.");
-        team.addMember("Jayden L.");
+        team.addMember("GUNTASH SINGH");
+        team.addMember("ANDREW");
+        team.addMember("JAYDEN");
         Team team2 = new Team("f25-15");
-        team2.addMember("Tim Van");
-        team2.addMember("Andrew X.");
-        team2.addMember("Jayden L.");
+        team2.addMember("TIM VAN");
+        team2.addMember("ANDREW");
+        team2.addMember("JAYDEN");
         assertFalse(team.equals(team2));
     }
 
